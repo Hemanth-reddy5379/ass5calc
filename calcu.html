@@ -1,0 +1,50 @@
+<html>
+<head>
+<title> Javascript Calculator </title>
+<h1> Javascript Calculator </h1>
+</head>
+<body>
+
+   <form>
+     <input type="number" name="num1" value="Enter the number">
+     <select name="operator">
+       <option value="+" selected>+</option>
+       <option value="-">-</option>
+       <option value="*">*</option>
+       <option value="/">/</option>
+     </select>
+     <input type="number" name="num2" value="Enter the number">
+     <button type="submit" onclick="calculate(this.form)">Calculate</button>
+     </form>
+<script>
+function calculate(form)
+{
+   var num1 = parseFloat(form.num1.value); 
+   var num2 = parseFloat(form.num2.value);
+   var operator=form.operator.value;
+   var result;
+   switch(operator)
+    {
+      case '+':
+           result=num1+num2;
+           break;
+      case '-':
+          result=num1-num2;
+          break;
+       case '*':
+          result=num1*num2;
+          break;
+       case '/':
+           result=num1/num2;
+           break;
+        default:
+          result="Invalid operator";
+      }
+      document.write( result);
+}
+</script>
+</body>
+</html>
+
+
+ 
